@@ -9,6 +9,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FilterPipe } from '../filters/filter.pipe';
 
 
 import { SearchBarComponent } from './search-bar/search-bar.component';
@@ -19,7 +21,8 @@ import { ListContentComponent } from './list-content/list-content.component';
   declarations: [
     AppComponent,
     SearchBarComponent,
-    ListContentComponent
+    ListContentComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,9 @@ import { ListContentComponent } from './list-content/list-content.component';
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

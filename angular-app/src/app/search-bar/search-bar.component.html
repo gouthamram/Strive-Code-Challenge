@@ -1,7 +1,11 @@
-<mat-form-field class="full" appearance="fill">
-    <mat-icon>search</mat-icon>
-    <input matInput type="search" placeholder="Search in Air HQ" class="input">
-    <button matSuffix mat-icon-button aria-label="Clear">
-        <mat-icon>close</mat-icon>
-    </button>
-</mat-form-field>
+<form class="form">
+    <mat-form-field class="full" appearance="fill">
+        <button matPrefix mat-icon-button aria-label="Search" (click)="search()">
+            <mat-icon>search</mat-icon>
+        </button>
+        <input matInput type="search" placeholder="Search in Air HQ" class="input" [formControl]="name">
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="clear()">
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+</form>

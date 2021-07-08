@@ -9,7 +9,7 @@
         Just type the name of the person you are looking for in the search box!</p>
     </div>
     <div class="search">
-      <app-search-bar></app-search-bar>
+      <app-search-bar (nameEntered)="filterByName($event)" (resetList)="reset()"></app-search-bar>
     </div>
     <div class="list">
         <mat-list class="full">

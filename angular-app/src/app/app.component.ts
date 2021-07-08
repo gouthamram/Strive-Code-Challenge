@@ -9,11 +9,19 @@ import * as _ from 'lodash';
 })
 export class AppComponent implements OnInit {
   title = 'The Person Finder';
+  public originalList: any[] = PEOPLE;
   public peopleList: any[] = PEOPLE;
-  public shortList: any[] = [];
+  public name: string = "";
   
   ngOnInit() {
-    this.shortList = _.take(this.peopleList, 3);
-    console.log(_.get(this.peopleList[0], 'name'));
+  }
+
+  filterByName(name: string) {
+    this.name = name;
+    this.peopleList = this.peopleList.filter(person => person.name === name); 
+  }
+  
+  reset() {
+    this.peopleList = this.originalList;
   }
 }
