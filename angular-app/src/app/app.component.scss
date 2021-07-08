@@ -1,0 +1,24 @@
+.content {
+    top:15%;
+    left: 30%;
+    position: absolute;
+    width: 40%;
+  }
+  .search {
+      width: 100%;
+      height: 2.5%;
+  }
+  .list {
+      width: 100%;
+      height: 300px;
+      margin-top: 5%;
+      overflow-y: auto;
+  }
+  .list-content {
+      color: black;
+      height: 75px;
+      list-style-type: none;
+  }
+  .full {
+      width: 100%;
+  }
